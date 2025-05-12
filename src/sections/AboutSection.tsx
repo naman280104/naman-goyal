@@ -25,7 +25,7 @@ const AboutSection: React.FC = () => {
           </CardHeader>
           <CardContent className="pt-6 prose prose-invert max-w-none">
             <p className="text-gray-300">
-              I'm a <span className="text-terminal-blue font-semibold">software developer</span> and CSE undergraduate at IIT Jodhpur (2021-2025).
+              I'm a <span className="text-terminal-blue font-semibold">software developer</span> and Computer Science graduate from IIT Jodhpur, Class of 2025.
             </p>
             <p className="text-gray-300">
               I specialize in full-stack development and competitive programming, with a passion for building efficient and scalable applications.
