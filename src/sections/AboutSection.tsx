@@ -28,7 +28,7 @@ const AboutSection: React.FC = () => {
               I'm a <span className="text-terminal-blue font-semibold">Software Engineer</span> and Computer Science graduate from IIT Jodhpur, Class of 2025.
             </p>
             <p className="text-gray-300">
-              I specialize in full-stack development and competitive programming, with a passion for building efficient and scalable applications.
+              I have specialized in full-stack development and competitive programming, with a passion for building efficient and scalable applications.
             </p>
             
             <div className="mt-6">
