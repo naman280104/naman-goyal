@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
               &copy; {currentYear} Naman Goyal. All rights reserved.
             </p>
             <p className="text-gray-500 text-xs mt-1">
-              <span className="text-terminal-green">root@naman-goyal:~$</span> echo "Built with React + Tailwind"
+              <span className="text-terminal-green">root@naman-goyal:~$</span> echo "Full Stack Developer"
             </p>
           </div>
           

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Github, Linkedin, Mail, ExternalLink } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone } from 'lucide-react';
 
 interface SocialLinksProps {
   className?: string;
@@ -39,13 +39,13 @@ const SocialLinks: React.FC<SocialLinksProps> = ({
         <Mail size={iconSize} />
       </a>
       <a 
-        href="https://portfolio.naman28.tech" 
+        href="tel:9887537123" 
         target="_blank" 
         rel="noopener noreferrer"
         className="text-white hover:text-terminal-cyan transition-colors duration-300"
-        aria-label="Portfolio"
+        aria-label="Phone"
       >
-        <ExternalLink size={iconSize} />
+        <Phone size={iconSize} />
       </a>
     </div>
   );

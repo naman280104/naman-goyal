@@ -1,6 +1,7 @@
 
 import React from 'react';
 import GlitchText from '../components/GlitchText';
+import { Award } from 'lucide-react';
 
 const AchievementsSection: React.FC = () => {
   const achievements = [
@@ -38,37 +39,33 @@ const AchievementsSection: React.FC = () => {
     <section id="achievements" className="py-20 px-6 relative">
       <div className="container mx-auto">
         <div className="mb-12 text-center">
-          <p className="text-terminal-green font-mono mb-2">$ cat achievements.txt</p>
+          <p className="text-terminal-green font-mono mb-2">
+            <Award className="inline mr-2" size={18} />
+            achievements.highlight
+          </p>
           <GlitchText text="Achievements" className="text-3xl md:text-4xl font-bold" />
         </div>
         
-        <div className="max-w-3xl mx-auto">
-          <div className="space-y-12">
-            {achievements.map((category, index) => (
-              <div key={index} className="terminal-container">
-                <div className="terminal-header">
-                  <div className="terminal-dot bg-red-500"></div>
-                  <div className="terminal-dot bg-yellow-500"></div>
-                  <div className="terminal-dot bg-green-500"></div>
-                  <span className="ml-2 text-sm text-gray-400">{category.category}</span>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-terminal-blue text-xl font-bold mb-4">{category.category}</h3>
-                  <div className="space-y-4">
-                    {category.items.map((item, itemIndex) => (
-                      <div key={itemIndex} className="flex flex-col md:flex-row md:justify-between">
-                        <div className="flex items-center">
-                          <span className="text-terminal-green mr-2">▶</span>
-                          <h4 className="text-white font-medium">{item.title}</h4>
-                        </div>
-                        <p className="text-gray-400 font-mono md:text-right">{item.description}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+          {achievements.map((category, index) => (
+            <div key={index} className="bg-gradient-to-br from-black to-terminal-dark/80 rounded-lg overflow-hidden border border-white/10 hover:border-terminal-blue/50 transition-all duration-300 transform hover:-translate-y-1">
+              <div className="bg-terminal-blue/10 p-4 border-b border-white/10">
+                <h3 className="text-terminal-blue text-xl font-bold">{category.category}</h3>
               </div>
-            ))}
-          </div>
+              
+              <div className="p-6 space-y-4">
+                {category.items.map((item, itemIndex) => (
+                  <div key={itemIndex} className="flex flex-col gap-1">
+                    <div className="flex items-center">
+                      <div className="w-2 h-2 rounded-full bg-terminal-green mr-2"></div>
+                      <h4 className="text-white font-medium">{item.title}</h4>
+                    </div>
+                    <p className="text-gray-400 font-mono text-sm ml-4 pl-2 border-l border-terminal-green/30">{item.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

@@ -38,14 +38,14 @@ const ContactSection: React.FC = () => {
                 </div>
                 
                 <div className="terminal-container p-4 text-center hover:border-terminal-purple transition-colors">
-                  <p className="text-terminal-purple mb-2">Portfolio</p>
+                  <p className="text-terminal-purple mb-2">WhatsApp</p>
                   <a 
-                    href="https://portfolio.naman28.tech" 
+                    href="https://wa.me/9887537123" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-white hover:text-terminal-blue transition-colors"
                   >
-                    portfolio.naman28.tech
+                    +91 9887537123
                   </a>
                 </div>
               </div>
