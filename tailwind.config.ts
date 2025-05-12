@@ -37,6 +37,9 @@ export default {
 					purple: "#9b87f5",
 					cyan: "#56d4dd", 
 					neon: "#00FFC6",
+					red: "#ff4d4f",
+					orange: "#ff8c00",
+					gray: "#6c757d",
 				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',

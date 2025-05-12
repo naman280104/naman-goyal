@@ -54,6 +54,7 @@ const NavBar = () => {
         </Link>
         
         <div className="hidden md:flex space-x-6 items-center">
+          <NavLink to="/#hero" isActive={activeSection === 'hero'}>Home</NavLink>
           <NavLink to="/#about" isActive={activeSection === 'about'}>About</NavLink>
           <NavLink to="/#skills" isActive={activeSection === 'skills'}>Skills</NavLink>
           <NavLink to="/#projects" isActive={activeSection === 'projects'}>Projects</NavLink>

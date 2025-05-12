@@ -27,8 +27,8 @@ const ContactSection: React.FC = () => {
               </p>
               
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="terminal-container p-4 text-center hover:border-terminal-green transition-colors">
-                  <p className="text-terminal-green mb-2">Email</p>
+                <div className="terminal-container p-4 text-center hover:border-terminal-cyan transition-colors">
+                  <p className="text-terminal-cyan mb-2">Email</p>
                   <a 
                     href="mailto:naman280104@gmail.com" 
                     className="text-white hover:text-terminal-blue transition-colors"
@@ -89,7 +89,7 @@ const ContactSection: React.FC = () => {
                   <div className="text-center">
                     <button 
                       type="submit" 
-                      className="px-6 py-3 rounded-md bg-terminal-green text-black font-medium hover:bg-terminal-green/80 transition-all duration-300 animate-pulse-glow"
+                      className="px-6 py-3 rounded-md bg-terminal-green text-black font-medium hover:bg-terminal-green/80 transition-all duration-2000 animate-pulse-glow"
                     >
                       Send Message
                     </button>

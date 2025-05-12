@@ -37,6 +37,7 @@ const ExperienceSection: React.FC = () => {
                     <div className="flex flex-wrap gap-2">
                       <span className="px-2 py-1 text-xs rounded-full bg-terminal-black border border-terminal-purple/30 text-terminal-purple">Shell Scripting</span>
                       <span className="px-2 py-1 text-xs rounded-full bg-terminal-black border border-terminal-blue/30 text-terminal-blue">React JS</span>
+                      <span className="px-2 py-1 text-xs rounded-full bg-terminal-black border border-terminal-blue/30 text-terminal-red">Java</span>
                       <span className="px-2 py-1 text-xs rounded-full bg-terminal-black border border-terminal-green/30 text-terminal-green">Perl</span>
                       <span className="px-2 py-1 text-xs rounded-full bg-terminal-black border border-terminal-cyan/30 text-terminal-cyan">AWS</span>
                       <span className="px-2 py-1 text-xs rounded-full bg-terminal-black border border-white/30 text-white">EC2</span>
@@ -50,6 +51,7 @@ const ExperienceSection: React.FC = () => {
             <div className="absolute bottom-0 left-0 w-0.5 h-full bg-gradient-to-b from-terminal-blue via-terminal-blue/20 to-transparent"></div>
           </div>
         </div>
+        
       </div>
     </section>
   );

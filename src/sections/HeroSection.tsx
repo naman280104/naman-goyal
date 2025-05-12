@@ -11,6 +11,7 @@ const HeroSection: React.FC = () => {
     "Software Engineer",
     "Full-Stack Developer"
   ];
+  const name = "Naman Goyal";
 
   const handleTypingComplete = () => {
     setTimeout(() => {
@@ -31,9 +32,10 @@ const HeroSection: React.FC = () => {
             <p className="text-terminal-green font-mono mb-4">root@naman-goyal:~$</p>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 font-sans tracking-wider">
               <TypingEffect 
-                text={textSequence[currentTextIndex]}
+                // text={textSequence[currentTextIndex]}
+                text='Naman Goyal'
                 typingSpeed={70}
-                onComplete={handleTypingComplete}
+                onComplete={()=>{}}
                 className="text-white"
               />
             </h1>
@@ -44,7 +46,7 @@ const HeroSection: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-6 mb-12">
               <a 
                 href="#contact" 
-                className="px-6 py-3 rounded-md bg-terminal-blue text-white font-medium hover:bg-terminal-blue/80 transition-all duration-300 inline-flex items-center justify-center space-x-2 animate-pulse-glow"
+                className="px-6 py-3 rounded-md bg-terminal-blue text-white font-medium hover:bg-terminal-blue/80 transition-all duration-2000 inline-flex items-center justify-center space-x-2 animate-pulse-glow"
               >
                 Get In Touch
               </a>
@@ -64,15 +66,21 @@ const HeroSection: React.FC = () => {
             </div>
           </div>
 
-          <div className="w-full md:w-1/3 flex justify-center md:justify-end">
-            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-terminal-blue/30 overflow-hidden animate-pulse-glow">
-              <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" 
-                alt="Naman Goyal" 
-                className="w-full h-full object-cover"
-              />
-            </div>
+          <div className="w-full md:w-1/2 flex justify-center">
+
+            <div className="relative w-64 h-64 md:w-80 md:h-80">
+              <div className="absolute inset-0 rounded-full border-4 border-terminal-blue/30 animate-pulse-glow pointer-events-none z-0"></div>
+
+              {/* Image Layer (not affected by animation) */}
+              <div className="relative w-full h-full rounded-full overflow-hidden z-10">
+                <img
+                  src="https://portfolio.naman28.tech/assets/myimg-CTasRAu4.jpeg"
+                  alt="Naman Goyal"
+                  className="w-full h-full object-cover"
+                />
+              </div>
           </div>
+</div>
         </div>
       </div>
       
