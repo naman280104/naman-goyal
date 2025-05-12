@@ -30,30 +30,7 @@ const ProjectsSection: React.FC = () => {
       projectUrl: "#",
       githubUrl: "https://github.com/naman280104"
     },
-    {
-      title: "AI-Powered Recommendation System",
-      description: "An intelligent recommendation system using machine learning algorithms to analyze user behavior and provide personalized content recommendations with high accuracy and relevance.",
-      techStack: ["Python", "TensorFlow", "AWS", "Django", "PostgreSQL"],
-      imageUrl: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
-      projectUrl: "#",
-      githubUrl: "https://github.com/naman280104"
-    },
-    {
-      title: "Blockchain Wallet Application",
-      description: "A secure cryptocurrency wallet application that allows users to manage digital assets across multiple blockchains with encrypted storage and transaction capabilities.",
-      techStack: ["Solidity", "React Native", "Web3.js", "Ethereum", "Redux"],
-      imageUrl: "https://images.unsplash.com/photo-1639322537228-f710d846310a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80",
-      projectUrl: "#",
-      githubUrl: "https://github.com/naman280104"
-    },
-    {
-      title: "Smart Home IoT Dashboard",
-      description: "An integrated IoT dashboard for controlling and monitoring smart home devices with real-time updates, automated routines, and energy consumption analytics.",
-      techStack: ["IoT", "MQTT", "React", "Node.js", "GraphQL"],
-      imageUrl: "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      projectUrl: "#",
-      githubUrl: "https://github.com/naman280104"
-    }
+    
   ];
 
   return (
