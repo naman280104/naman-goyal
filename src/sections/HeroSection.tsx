@@ -74,7 +74,7 @@ const HeroSection: React.FC = () => {
               {/* Image Layer (not affected by animation) */}
               <div className="relative w-full h-full rounded-full overflow-hidden z-10">
                 <img
-                  src="https://portfolio.naman28.tech/assets/myimg-CTasRAu4.jpeg"
+                  src="public\naman-profile-pic.jpeg"
                   alt="Naman Goyal"
                   className="w-full h-full object-cover"
                 />
