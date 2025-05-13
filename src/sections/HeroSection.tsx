@@ -52,7 +52,8 @@ const HeroSection: React.FC = () => {
               </a>
               
               <a 
-                href="/resume.pdf" 
+                href="Naman_Resume.pdf"
+                download="Naman_Resume.pdf" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-gray-300 hover:text-terminal-neon transition-all duration-200 font-mono group"
@@ -74,7 +75,7 @@ const HeroSection: React.FC = () => {
               {/* Image Layer (not affected by animation) */}
               <div className="relative w-full h-full rounded-full overflow-hidden z-10">
                 <img
-                  src="public\naman-profile-pic.jpeg"
+                  src="naman-profile-pic.jpeg"
                   alt="Naman Goyal"
                   className="w-full h-full object-cover"
                 />
