@@ -49,7 +49,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 <Github size={20} />
               </a>
             )}
-            {projectUrl && (
+            {projectUrl && projectUrl!="#" && (
               <a 
                 href={projectUrl} 
                 target="_blank" 
