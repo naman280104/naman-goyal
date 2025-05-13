@@ -47,7 +47,7 @@ const NavBar = () => {
   return (
     <nav className="sticky top-0 z-50 backdrop-blur-md bg-terminal-dark/80 border-b border-white/10 py-4 px-6">
       <div className="container mx-auto flex justify-between items-center">
-        <Link to="/" className="text-xl font-bold text-terminal-neon">
+        <Link to="" className="text-xl font-bold text-terminal-neon">
           <span className="text-white">&lt;</span>
           <span className="text-terminal-neon">ng</span>
           <span className="text-white">/&gt;</span>
