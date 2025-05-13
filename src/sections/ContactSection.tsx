@@ -1,9 +1,35 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import GlitchText from '../components/GlitchText';
 import SocialLinks from '../components/SocialLinks';
 
 const ContactSection: React.FC = () => {
+
+  const [status, setStatus] = useState(""); // for notification
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+
+    const data = new FormData(form);
+
+    const response = await fetch("https://formspree.io/f/xldbobqa", {
+      method: "POST",
+      body: data,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (response.ok) {
+      setStatus("Message sent successfully!");
+      form.reset();
+      setTimeout(() => setStatus(""), 4000); // Hide after 4s
+    } else {
+      setStatus("Something went wrong. Please try again.");
+    }
+  };
+
   return (
     <section id="contact" className="py-20 px-6 bg-terminal-black/30 relative">
       <div className="container mx-auto">
@@ -55,13 +81,15 @@ const ContactSection: React.FC = () => {
               </div>
 
               <div className="mt-10">
-                <form className="space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="name" className="block text-terminal-green mb-2 font-mono">_name</label>
                       <input 
                         type="text" 
-                        id="name" 
+                        id="name"
+                        name="name"
+                        required
                         className="w-full bg-terminal-black border border-gray-700 rounded-md px-4 py-2 text-white focus:outline-none focus:border-terminal-green"
                         placeholder="John Doe"
                       />
@@ -71,6 +99,8 @@ const ContactSection: React.FC = () => {
                       <input 
                         type="email" 
                         id="email" 
+                        name="email"
+                        required
                         className="w-full bg-terminal-black border border-gray-700 rounded-md px-4 py-2 text-white focus:outline-none focus:border-terminal-green"
                         placeholder="johndoe@example.com"
                       />
@@ -80,12 +110,14 @@ const ContactSection: React.FC = () => {
                     <label htmlFor="message" className="block text-terminal-green mb-2 font-mono">_message</label>
                     <textarea 
                       id="message" 
+                      name="message"
                       rows={5}
+                      required
                       className="w-full bg-terminal-black border border-gray-700 rounded-md px-4 py-2 text-white focus:outline-none focus:border-terminal-green"
                       placeholder="Your message here..."
                     ></textarea>
                   </div>
-                  
+
                   <div className="text-center">
                     <button 
                       type="submit" 
@@ -94,8 +126,15 @@ const ContactSection: React.FC = () => {
                       Send Message
                     </button>
                   </div>
+
+                  {status && (
+                    <div className="text-terminal-green font-mono text-center mt-4">
+                      {status}
+                    </div>
+                  )}
                 </form>
               </div>
+
             </div>
           </div>
         </div>
