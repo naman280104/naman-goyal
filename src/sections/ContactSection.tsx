@@ -1,9 +1,27 @@
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import GlitchText from '../components/GlitchText';
 import SocialLinks from '../components/SocialLinks';
 
+declare global {
+  interface Window {
+    grecaptcha: any;
+  }
+}
+
 const ContactSection: React.FC = () => {
+
+  useEffect(() => {
+    const loadRecaptcha = () => {
+      const script = document.createElement('script');
+      script.src = 'https://www.google.com/recaptcha/api.js';
+      script.async = true;
+      script.defer = true;
+      document.body.appendChild(script);
+    };
+
+    loadRecaptcha();
+  }, []);
 
   const [status, setStatus] = useState(""); // for notification
 
@@ -11,16 +29,22 @@ const ContactSection: React.FC = () => {
     e.preventDefault();
     const form = e.target;
 
-    const data = new FormData(form);
+    const recaptchaToken = window.grecaptcha.getResponse();
+    if (!recaptchaToken) {
+      setStatus("Please complete the CAPTCHA.");
+      return;
+    }
 
+    const formData = new FormData(form);
+    
     const response = await fetch("https://formspree.io/f/xldbobqa", {
       method: "POST",
-      body: data,
+      body: formData,
       headers: {
         Accept: "application/json",
       },
     });
-
+    
     if (response.ok) {
       setStatus("Message sent successfully!");
       form.reset();
@@ -117,7 +141,7 @@ const ContactSection: React.FC = () => {
                       placeholder="Your message here..."
                     ></textarea>
                   </div>
-
+                  <div className="g-recaptcha"  data-sitekey="6LcltTgrAAAAAHTILV17r4bG8bMxWunuAFgvNDAw"></div>
                   <div className="text-center">
                     <button 
                       type="submit" 
@@ -126,7 +150,7 @@ const ContactSection: React.FC = () => {
                       Send Message
                     </button>
                   </div>
-
+                  
                   {status && (
                     <div className="text-terminal-green font-mono text-center mt-4">
                       {status}
