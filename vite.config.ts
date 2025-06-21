@@ -21,4 +21,13 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    outDir: "dist",
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, "index.html"),
+        fallback: path.resolve(__dirname, "index.html"),        
+      },
+    },
+  },
 }));
